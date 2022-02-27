@@ -13,4 +13,12 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="StackExchangeText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#7D7E7D</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="headings" parent="TextAppearance.Material3.BodyMedium">
+        <!--customizations go here-->
+    </style>
 </resources>
