@@ -6,4 +6,12 @@
     <string name="search_users">Search users</string>
     <string name="empty_state_image">Empty state image</string>
     <string name="no_results_found">No results found</string>
+    <string name="details_screen_title">User</string>
+    <string name="user_image">User image</string>
+    <string name="user_name">User Name</string>
+    <string name="reputation">Reputation</string>
+    <string name="top_tags">Top Tags</string>
+    <string name="badges">Badges</string>
+    <string name="badges_count">Gold: %1$d\nSilver: %2$d\nBronze: %3$d</string>
+    <string name="location">Location</string>
 </resources>

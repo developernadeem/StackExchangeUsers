@@ -23,6 +23,11 @@ class StackExchangeRepository @Inject constructor(private val service: StackExch
 
     }
 
+    fun topTags(userId:Int) = flow {
+        val response = service.getTopTags(userId)
+        emit(response)
+    }
+
     companion object {
         const val PAGE_SIZE = 20
     }

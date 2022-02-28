@@ -3,6 +3,7 @@ package com.proxidize.stackexchangeusers.features.mainscreen
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -34,10 +35,19 @@ class SearchAdapter : ListAdapter<User, RecyclerView.ViewHolder>(UserDiffCallbac
         private val binding: ListItemSearchBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
+        private fun navigateToDetailsScreen(user: User, view: View) {
+            val action = SearchFragmentDirections.actionMainScreenFragmentToDetailsFragment(user)
+            view.findNavController().navigate(action)
+
+        }
+
         fun bind(item: User) {
             binding.apply {
                 tvUserId.text = item.userId.toString()
                 tvUserName.text = item.displayName
+                root.setOnClickListener {
+                    navigateToDetailsScreen(item, it)
+                }
             }
         }
     }
